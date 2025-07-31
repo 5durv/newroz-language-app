@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نوروز - تعلم 6 لغات</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="login-container">
+        <!-- شعار نوروز -->
+        <div class="logo-section">
+            <div class="newroz-logo">
+                <svg width="120" height="120" viewBox="0 0 200 200">
+                    <!-- الشمس المركزية -->
+                    <circle cx="100" cy="100" r="35" fill="#FFCD00" stroke="#FFA500" stroke-width="3"/>
+                    
+                    <!-- البتلات الـ6 للغات -->
+                    <ellipse cx="100" cy="55" rx="18" ry="30" fill="#2E8B57" transform="rotate(0 100 100)"/>
+                    <ellipse cx="100" cy="55" rx="18" ry="30" fill="#1E3A8A" transform="rotate(60 100 100)"/>
+                    <ellipse cx="100" cy="55" rx="18" ry="30" fill="#DD0000" transform="rotate(120 100 100)"/>
+                    <ellipse cx="100" cy="55" rx="18" ry="30" fill="#002395" transform="rotate(180 100 100)"/>
+                    <ellipse cx="100" cy="55" rx="18" ry="30" fill="#C60B1E" transform="rotate(240 100 100)"/>
+                    <ellipse cx="100" cy="55" rx="18" ry="30" fill="#CE1126" transform="rotate(300 100 100)"/>
+                    
+                    <!-- رموز اللغات -->
+                    <text x="100" y="45" text-anchor="middle" font-size="12" fill="white">ع</text>
+                    <text x="130" y="70" text-anchor="middle" font-size="12" fill="white">E</text>
+                    <text x="130" y="130" text-anchor="middle" font-size="12" fill="white">D</text>
+                    <text x="100" y="155" text-anchor="middle" font-size="12" fill="white">F</text>
+                    <text x="70" y="130" text-anchor="middle" font-size="12" fill="white">S</text>
+                    <text x="70" y="70" text-anchor="middle" font-size="12" fill="white">ک</text>
+                </svg>
+            </div>
+            <h1 class="app-title">🌸 نوروز 🌸</h1>
+            <p class="app-subtitle">تعلم 6 لغات مع الأصدقاء المرحين</p>
+            
+            <!-- معاينة اللغات -->
+            <div class="languages-preview">
+                <span class="lang-item">🇸🇦 عربي</span>
+                <span class="lang-item">🇺🇸 English</span>
+                <span class="lang-item">🇩🇪 Deutsch</span>
+                <span class="lang-item">🇫🇷 Français</span>
+                <span class="lang-item">🇪🇸 Español</span>
+                <span class="lang-item">🟨🟥⬜🟩 کوردی</span>
+            </div>
+        </div>
+
+        <!-- منطقة تسجيل الدخول -->
+        <div class="auth-section">
+            <div class="auth-card">
+                <h2>ابدأ رحلة التعلم</h2>
+                
+                <!-- أزرار تسجيل الدخول -->
+                <div class="auth-buttons">
+                    <button id="googleLogin" class="auth-btn google-btn">
+                        <span>🔗</span>
+                        <span>تسجيل دخول بـ Google</span>
+                    </button>
+                    
+                    <button id="showEmailForm" class="auth-btn email-btn">
+                        <span>📧</span>
+                        <span>تسجيل دخول بالإيميل</span>
+                    </button>
+                </div>
+
+                <!-- نموذج الإيميل -->
+                <div id="emailForm" class="email-form hidden">
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="password" id="password" placeholder="كلمة المرور" required>
+                    </div>
+                    <div class="form-actions">
+                        <button id="loginBtn" class="action-btn primary">دخول</button>
+                        <button id="signupBtn" class="action-btn secondary">إنشاء حساب</button>
+                    </div>
+                </div>
+
+                <!-- رسائل الحالة -->
+                <div id="statusMessage" class="status-message hidden"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore-compat.js"></script>
+    
+    <script src="js/firebase-config.js"></script>
+    <script src="js/auth.js"></script>
+</body>
+</html>
